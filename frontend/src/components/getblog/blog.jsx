@@ -11,7 +11,7 @@ const Blogs = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get("hhttps://blog-app-backend-ivory.vercel.app/api/getall");
+                const response = await axios.get("https://blog-app-backend-ivory.vercel.app/api/getall");
                 setBlogs(response.data);
             } catch (error) {
                 console.log("Error fetching data: ", error);
@@ -55,7 +55,7 @@ const Blogs = () => {
                                         <td>{blog.author}</td>
                                         <td className='actionButton'>
                                             <button onClick={() => deleteBlog(blog._id)}><i className="fa-solid fa-trash"></i></button>
-                                            <Link to={`/edit/` + blog._id}><i className="fa-solid fa-pen-to-square"></i></Link>
+                                            <Link to={`/edit/` +blog._id}><i className="fa-solid fa-pen-to-square"></i></Link>
                                         </td>
                                     </tr>
 
