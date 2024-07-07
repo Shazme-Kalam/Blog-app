@@ -1,0 +1,58 @@
+.blogTable{
+    width: 90%;
+    background-color: white;
+    box-shadow:  1px 1px 8px rgba(0, 0, 0, 0.065);
+    border-radius: 5px;
+    margin: 50px auto;
+    padding: 50px;
+}
+.addButton{
+    text-decoration: none;
+    background-color: rgb(226, 43, 156);
+    color: azure;
+    font-weight: 800;
+    box-shadow: 1px 1px 8px rgba(70, 64, 64, 0.065);
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+.blogTable table{
+    width: 100%;
+    margin-top: 30px;
+    border-collapse: collapse;
+}
+.blogTable table thead th{
+    background-color: rgb(39, 96, 77);
+    color: beige;
+    padding: 10px;
+
+}
+
+.blogTable table tbody td {
+    padding: 10px;
+    text-align: center;
+}
+.noData{
+    text-align: center;
+    color: green;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+.actionButton button{
+    border: 0;
+    outline: none;
+    background: rgb(201, 34, 34);
+    padding: 6px 10px;
+    color: wheat;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.actionButton a{
+    background: rgb(35, 124, 23);
+    padding: 6px 8px;
+    color: wheat;
+    border-radius: 4px;
+    text-decoration: none;
+    margin: 0 8px;
+}
