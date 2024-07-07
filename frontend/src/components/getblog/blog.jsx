@@ -41,6 +41,7 @@ const Blogs = () => {
                         <th>Blog's Title</th>
                         <th>Blog's Description</th>
                         <th>Author</th>
+                        <th>Delete / Edit</th>
                     </tr>
                 </thead>
                 <tbody>
