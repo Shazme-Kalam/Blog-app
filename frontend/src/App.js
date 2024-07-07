@@ -1,12 +1,11 @@
+import React from 'react';
 import './App.css';
-import { RouterProvider, createBrowserRouter } from "react-router-dom"
-import Blogs from './components/getblog/blog';
-import Add from './components/addblog/add';
-import Edit from '.components/update/Edit';
- 
-import React from 'react'
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Blogs from './components/getblog/blog'; 
+import Add from './components/addblog/add'; 
+import Edit from './components/updateblog/Edit';
 
-const App = () => {
+function App() {
   const route = createBrowserRouter([
     {
       path: "/",
@@ -20,12 +19,14 @@ const App = () => {
       path: "/edit/:id",
       element: <Edit />,
     },
-  ])
+  ]);
+  
   return (
     <div className="App">
-    <RouterProvider router={route}>  </RouterProvider>
-  </div>
-);
+      <RouterProvider router={route}>
+          </RouterProvider>
+    </div>
+  );
 }
 
 export default App;

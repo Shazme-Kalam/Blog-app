@@ -28,7 +28,7 @@ const Add = () => {
         event.preventDefault();
     
         try {
-            const response = await axios.post('http://localhost:8000/api/create', blog);
+            const response = await axios.post('http://localhost:5000/api/create', blog);
             console.log(response);
             toast.success('Blog Added Successfully.', { position: 'top-center' });
             navigate('/');

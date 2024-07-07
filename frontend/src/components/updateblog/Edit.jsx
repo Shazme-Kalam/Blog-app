@@ -1,41 +1,39 @@
 import React, { useEffect, useState } from 'react';
-import "../addblog/add";
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import axios from "axios";
 
 const Edit = () => {
-    const blogs = {
+    const initialBlogState = {
         title: "",
         description: "",
         author: ""
+    };
 
-    }
-
-    const {id} = useParams();
+    const { id } = useParams();
     const navigate = useNavigate();
-    const [blog, setBlog] = useState(blogs);
+    const [blog, setBlog] = useState(initialBlogState);
 
     const inputChangeHandler = (e) => {
         const { name, value } = e.target;
         setBlog({ ...blog, [name]: value });
-        console.log(blog);
-    }
+    };
+
     useEffect(() => {
-        axios.get(`http://localhost:8000/api/getone/${id}`)
+        axios.get(`http://localhost:5000/api/getone/${id}`)
             .then((response) => {
-                setBlog(response.request)
-                console.log(response)
+                setBlog(response.data); 
+                console.log(response);
             })
             .catch((error) => {
                 console.log(error);
-            })
-    },[id])
+            });
+    }, [id]);
 
     const submitForm = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.put(`http://localhost:8000/api/update/${id}`, blog);
+            const response = await axios.put(`http://localhost:5000/api/update/${id}`, blog);
             console.log(response);
             toast.success("Blogs Updated Successfully", { position: "top-center" });
             navigate("/");
@@ -70,10 +68,9 @@ const Edit = () => {
                         <button type='submit'>Update</button>
                     </div>
                 </form>
-
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default Edit;

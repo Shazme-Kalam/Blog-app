@@ -11,7 +11,7 @@ const Blogs = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get("http://localhost:8000/api/getall");
+                const response = await axios.get("http://localhost:5000/api/getall");
                 setBlogs(response.data);
             } catch (error) {
                 console.log("Error fetching data: ", error);
@@ -22,7 +22,7 @@ const Blogs = () => {
     }, []);
     const deleteBlog = async (blogId) => {
         try {
-            await axios.delete(`http://localhost:8000/api/delete/${blogId}`);
+            await axios.delete(`http://localhost:5000/api/delete/${blogId}`);
             setBlogs((prevUsers) => prevUsers.filter((blog) => blog._id !== blogId));
             toast.success("Blogs Removed Successfully", { position: "top-center" });
         } catch (error) {
