@@ -23,7 +23,7 @@ const Blogs = () => {
     const deleteBlog = async (blogId) => {
         try {
             await axios.delete(`https://blog-app-backend-ivory.vercel.app/api/delete/${blogId}`);
-            setBlogs((prevUsers) => prevUsers.filter((blog) => blog._id !== blogId));
+            setBlogs((prevBlogs) => prevBlogs.filter((blog) => blog._id !== blogId));
             toast.success("Blogs Removed Successfully", { position: "top-center" });
         } catch (error) {
             console.error("There was an error deleting the blog:", error);
