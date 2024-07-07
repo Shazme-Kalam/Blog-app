@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import axios from "axios";
+import { RiArrowGoBackLine } from 'react-icons/ri';
 
 const Edit = () => {
     const initialBlogState = {
@@ -46,7 +47,9 @@ const Edit = () => {
     return (
         <div>
             <div className='addBlog'>
-                <Link to={"/"}>Back</Link>
+            <Link to="/" style={{ color: 'green', fontSize: '24px' }}> 
+            <RiArrowGoBackLine />
+            </Link>
                 <h3>Update blog</h3>
                 <form className='addBlogForm' onSubmit={submitForm}>
                     <div className='inputGroup'>
