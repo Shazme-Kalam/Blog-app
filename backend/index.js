@@ -11,9 +11,9 @@ const app = express();
 app.use(express.json());
 
 const corsOption = {
-    origin: ['http://localhost:3000'],
-    credentials: true,
+    origin: 'https://blog-app-frontend-delta.vercel.app',
     methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
 }
 app.use(cors(corsOption));
 
