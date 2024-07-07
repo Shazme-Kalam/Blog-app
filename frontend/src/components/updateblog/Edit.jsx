@@ -32,7 +32,7 @@ const Edit = () => {
             })
     },[id])
 
-    const submitForm = async (e) => {
+    const submitForm = async(e) => {
         e.preventDefault();
         try {
             const response = await axios.put(`http://localhost:8000/api/update/${id}`, blog);
@@ -47,7 +47,7 @@ const Edit = () => {
 
     return (
         <div>
-            <div className='addUser'>
+            <div className='addBlog'>
                 <Link to={"/"}>Back</Link>
                 <h3>Update blog</h3>
                 <form className='addBlogForm' onSubmit={submitForm}>
