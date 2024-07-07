@@ -62,7 +62,7 @@ const Blogs = () => {
                                 )
                             })
                         ) : (
-                            <div className='noData'>No blogs found. </div>
+                            <div className='noData'>No blogs, Add your Blogs. </div>
                         )
                     }
 
