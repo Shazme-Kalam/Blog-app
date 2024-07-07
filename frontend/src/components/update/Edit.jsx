@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import "../addblog/add.css";
-import axios from "axios";
+import "../addblog/add";
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import toast from 'react-hot-toast';
+import axios from "axios";
 
 const Edit = () => {
     const blogs = {
@@ -32,7 +32,7 @@ const Edit = () => {
             })
     },[id])
 
-    const submitForm = async(e) => {
+    const submitForm = async (e) => {
         e.preventDefault();
         try {
             const response = await axios.put(`http://localhost:8000/api/update/${id}`, blog);
