@@ -2,10 +2,10 @@
 import mongoose from 'mongoose';
 
 // MongoDB connection string
-const uri = 'mongodb+srv://missshazmekalam66_db_user:iJ3CZn0cpIMySlMp@cluster0.hsg3hfn.mongodb.net/';
+const url = 'mongodb+srv://missshazmekalam66_db_user:iJ3CZn0cpIMySlMp@cluster0.hsg3hfn.mongodb.net';
 
 // Connect to MongoDB
-mongoose.connect(uri, {
+mongoose.connect(url, {
     useNewUrlParser: true,   // URL ko correctly parse karne ke liye
     useUnifiedTopology: true // Server discovery & monitoring ke liye
 })
