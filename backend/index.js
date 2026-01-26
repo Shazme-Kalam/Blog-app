@@ -10,12 +10,17 @@ const app = express();
 
 app.use(express.json());
 
-const corsOption = {
+app.use(cors({
   origin: 'https://blog-app-sooty-eight.vercel.app',
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true,
-};
-app.use(cors(corsOption));
+}));
+
+app.options('*', (req, res) => {
+  res.header("Access-Control-Allow-Origin", "https://blog-app-sooty-eight.vercel.app");
+  res.header("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE,OPTIONS");
+  res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  return res.sendStatus(200);
+});
+
 // const corsOption = {
 //     origin: 'https://blog-87ipb032i-shazmes-projects.vercel.app',
 //     // origin: 'https://blog-app-frontend-delta.vercel.app',
