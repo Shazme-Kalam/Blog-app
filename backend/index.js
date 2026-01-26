@@ -11,12 +11,17 @@ const app = express();
 app.use(express.json());
 
 const corsOption = {
-    origin: 'https://blog-87ipb032i-shazmes-projects.vercel.app',
-    // origin: 'https://blog-app-frontend-delta.vercel.app',
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,
-}
+  origin: 'https://blog-app-sooty-eight.vercel.app',
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true,
+};
 app.use(cors(corsOption));
+// const corsOption = {
+//     origin: 'https://blog-87ipb032i-shazmes-projects.vercel.app',
+//     // origin: 'https://blog-app-frontend-delta.vercel.app',
+//     methods: ["GET", "POST", "PUT", "DELETE"],
+//     credentials: true,
+// }
 
 const PORT = process.env.PORT || 5000;
 const databaseUrl = process.env.DATABASE_URL;
