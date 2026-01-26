@@ -11,7 +11,8 @@ const app = express();
 app.use(express.json());
 
 const corsOption = {
-    origin: 'https://blog-app-frontend-delta.vercel.app',
+    origin: 'https://blog-app-frontend-h5is8kceq-shazmes-projects.vercel.app',
+    // origin: 'https://blog-app-frontend-delta.vercel.app',
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
 }

@@ -22,7 +22,7 @@ const Edit = () => {
 
     useEffect(() => {
         
-        axios.get(`https://blog-app-backend-ivory.vercel.app/api/getone/${id}`)
+        axios.get(`https://blog-app-backend-ba2g7tvdh-shazmes-projects.vercel.app/api/getone/${id}`)
             .then((response) => {
                 setBlog(response.data); 
                 console.log(response);
@@ -34,8 +34,9 @@ const Edit = () => {
 
     const submitForm = async (e) => {
         e.preventDefault();
+        
         try {
-            const response = await axios.put(`https://blog-app-backend-ivory.vercel.app/api/update/${id}`, blog);
+            const response = await axios.put(`https://blog-app-backend-ba2g7tvdh-shazmes-projects.vercel.app/api/update/${id}`, blog);
             console.log(response);
             toast.success("Blogs Updated Successfully", { position: "top-center" });
             navigate("/");
@@ -78,3 +79,4 @@ const Edit = () => {
 };
 
 export default Edit;
+//blog-app-backend-ivory.vercel.app/
