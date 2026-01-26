@@ -28,7 +28,7 @@ const Add = () => {
         event.preventDefault();
     
         try {
-            const response = await axios.post('https://blog-app-backend-ba2g7tvdh-shazmes-projects.vercel.app/api/create', blog);
+            const response = await axios.post('https://blog-app-b8m2-98d0lep0q-shazmes-projects.vercel.app/api/create', blog);
             console.log(response);
             toast.success('Blog Added Successfully.', { position: 'top-center' });
             navigate('/');

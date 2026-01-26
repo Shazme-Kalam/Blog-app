@@ -11,7 +11,7 @@ const Blogs = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get("https://blog-app-backend-ba2g7tvdh-shazmes-projects.vercel.app/api/getall");
+                const response = await axios.get("https://blog-app-b8m2-98d0lep0q-shazmes-projects.vercel.app/api/getall");
                 setBlogs(response.data);
             } catch (error) {
                 console.log("Error fetching data: ", error);
@@ -22,7 +22,7 @@ const Blogs = () => {
     }, []);
     const deleteBlog = async (blogId) => {
         try {
-            await axios.delete(`https://blog-app-backend-ba2g7tvdh-shazmes-projects.vercel.app/api/delete/${blogId}`);
+            await axios.delete(`https://blog-app-b8m2-98d0lep0q-shazmes-projects.vercel.app/api/delete/${blogId}`);
             setBlogs((prevBlogs) => prevBlogs.filter((blog) => blog._id !== blogId));
             toast.success("Blogs Removed Successfully", { position: "top-center" });
         } catch (error) {
