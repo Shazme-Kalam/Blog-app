@@ -21,6 +21,7 @@ const Edit = () => {
     };
 
     useEffect(() => {
+        
         axios.get(`https://blog-app-backend-ivory.vercel.app/api/getone/${id}`)
             .then((response) => {
                 setBlog(response.data); 
